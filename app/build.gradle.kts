@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.mm_music"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.mm_music"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -56,4 +56,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //navigation dependencies
+    val nav_version = "2.8.7"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
