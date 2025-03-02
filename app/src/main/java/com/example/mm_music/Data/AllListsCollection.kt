@@ -30,7 +30,30 @@ val listOfBottomIcon = listOf<BottomBarNavigationItem>(
 
 
 )
-val listOfAlubm = listOf<Album>(
+val listOfSongs = listOf(
+    Song("song1","artist1",R.drawable.s1),
+    Song("song2","artist2",R.drawable.s2),
+    Song("song3","artist3",R.drawable.s3),
+    Song("song4","artist4",R.drawable.s4),
+    Song("song5","artist5",R.drawable.s5),
+    Song("song1","artist1",R.drawable.s1),
+    Song("song2","artist2",R.drawable.s2),
+    Song("song3","artist3",R.drawable.s3),
+    Song("song4","artist4",R.drawable.s4),
+    Song("song5","artist5",R.drawable.s5),
+    Song("song1","artist1",R.drawable.s1),
+    Song("song2","artist2",R.drawable.s2),
+    Song("song3","artist3",R.drawable.s3),
+    Song("song4","artist4",R.drawable.s4),
+    Song("song5","artist5",R.drawable.s5),
+    Song("song1","artist1",R.drawable.s1),
+    Song("song2","artist2",R.drawable.s2),
+    Song("song3","artist3",R.drawable.s3),
+    Song("song4","artist4",R.drawable.s4),
+    Song("song5","artist5",R.drawable.s5),
+
+)
+val listOfAlubm = listOf(
     Album("album1","Love", R.drawable.album_photo,listOf(
         Song("song1","artist1",R.drawable.s1),
         Song("song2","artist2",R.drawable.s2),
@@ -40,19 +63,19 @@ val listOfAlubm = listOf<Album>(
 
     )),
     Album("album2","Love", R.drawable.album_image1,listOf(
-        Song("song1","artist1",R.drawable.s1),
-        Song("song2","artist2",R.drawable.s2),
-        Song("song3","artist3",R.drawable.s3),
-        Song("song4","artist4",R.drawable.s4),
-        Song("song5","artist5",R.drawable.s5),
+        Song("sodsfsd","artist1",R.drawable.s1),
+        Song("dsfa","artist2",R.drawable.s2),
+        Song("sdfs","artist3",R.drawable.s3),
+        Song("dsfas","artist4",R.drawable.s4),
+        Song("sdfsa","artist5",R.drawable.s5),
 
         )),
     Album("album3","Love", R.drawable.album_image3,listOf(
-        Song("song1","artist1",R.drawable.s1),
-        Song("song2","artist2",R.drawable.s2),
-        Song("song3","artist3",R.drawable.s3),
-        Song("song4","artist4",R.drawable.s4),
-        Song("song5","artist5",R.drawable.s5),
+        Song("dfad","artist1",R.drawable.s1),
+        Song("dfasdsgasfd","artist2",R.drawable.s2),
+        Song("3456","artist3",R.drawable.s3),
+        Song("son23456789g4","artist4",R.drawable.s4),
+        Song("2345678909876543","artist5",R.drawable.s5),
 
         )),
     Album("album4","Love", R.drawable.album_image4,listOf(

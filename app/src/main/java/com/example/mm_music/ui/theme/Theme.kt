@@ -9,6 +9,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
@@ -16,6 +17,20 @@ private val DarkColorScheme = darkColorScheme(
     secondary = PurpleGrey80,
     tertiary = Pink80
 )
+
+//the below dark theme is custom
+//private  val DarkColorScheme = darkColorScheme(
+//    primary = Color(0xFFBB86FC),
+//    secondary = Color(0xFF03DAC6),
+//    tertiary = Color(0xFF3700B3),
+//    background = Color(0xFF121212), // Dark background
+//    surface = Color(0xFF121212), // Dark surface
+//    onPrimary = Color.Black,
+//    onSecondary = Color.Black,
+//    onTertiary = Color.White,
+//    onBackground = Color.White, // White text on dark background
+//    onSurface = Color.White, // White text on dark surface
+//)
 
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
@@ -36,6 +51,8 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun MMMusicTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    //the below is I changed and above is pre defined
+//    darkTheme: Boolean =true,
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit

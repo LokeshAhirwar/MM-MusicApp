@@ -22,17 +22,29 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
+import com.example.mm_music.Data.listOfAlubm
 import com.example.mm_music.R
 
 @Composable
 fun playerScreen(modifier: Modifier){
+    var listofSongs by remember { mutableStateOf(listOfAlubm.first().songs) }
+    var suffleOnOff by remember { mutableStateOf(false) }
+    var playOnOff by remember { mutableStateOf(false) }
     Box(modifier = Modifier.fillMaxSize()){
         Box(modifier = Modifier
             .fillMaxSize()
@@ -56,20 +68,23 @@ fun playerScreen(modifier: Modifier){
 
             Row(modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly) {
-                IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.Home, contentDescription = null)
+                IconButton(onClick = { suffleOnOff = !suffleOnOff }) {
+                    Icon(painter = painterResource(if(suffleOnOff) R.drawable.shuffle else R.drawable.shuffle_off),
+                        contentDescription = "suffle")
                 }
                 IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = null)
+                    Icon(painter = painterResource(R.drawable.backward), contentDescription = "backward")
+                }
+                IconButton(onClick = { playOnOff = !playOnOff }) {
+                    Icon(painter = painterResource(if(playOnOff) R.drawable.music_note_2_play_20_regular else R.drawable.music_note_2_play_20_filled),
+                        contentDescription = "play on off")
                 }
                 IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.PlayArrow, contentDescription = null,modifier = Modifier.size(50.dp))
+                    Icon(painter = painterResource(R.drawable.forward), contentDescription = "forward")
                 }
-                IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.KeyboardArrowRight, contentDescription = null)
-                }
-                IconButton(onClick = { }) {
-                    Icon(imageVector = Icons.Default.Refresh, contentDescription = null)
+                IconButton(onClick = { },modifier = Modifier.clip(shape = RectangleShape)) {
+                    Icon(painter = painterResource(R.drawable.repeat), contentDescription = null,
+                        modifier = Modifier.clip(shape = RectangleShape))
                 }
 
             }
