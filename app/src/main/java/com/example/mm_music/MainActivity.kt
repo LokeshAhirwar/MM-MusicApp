@@ -22,7 +22,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             MMMusicTheme {
                 mainScreen()
-                
+
+
+
             }
         }
     }
