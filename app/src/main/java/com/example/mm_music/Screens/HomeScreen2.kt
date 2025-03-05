@@ -36,6 +36,7 @@ import com.example.mm_music.Data.listOfSongs
 fun homeScreen2(modifier: Modifier){
    LazyColumn(modifier = modifier.fillMaxWidth(),
 //       .background(),
+
        contentPadding = PaddingValues(16.dp),
        verticalArrangement = Arrangement.spacedBy(16.dp)) {
        item{
