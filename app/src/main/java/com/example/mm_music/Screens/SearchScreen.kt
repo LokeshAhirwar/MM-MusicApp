@@ -46,6 +46,7 @@ import com.example.mm_music.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun searchScreen(modifier: Modifier){
+//fun searchScreen(){
     Column(modifier = Modifier.fillMaxSize().padding(top = 70.dp)
     ) {
         var isSearchBarActive  by remember { mutableStateOf(false) }
@@ -68,6 +69,10 @@ fun searchScreen(modifier: Modifier){
 
                 }else {
                     Suggestions.add(SearchQuery)
+
+
+
+
                 }
                 showSearchScreen = true
                 isSearchBarActive = false

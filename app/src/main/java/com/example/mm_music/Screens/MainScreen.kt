@@ -55,7 +55,7 @@ fun mainScreen(){
 @Composable
 fun navigateTo(modifier: Modifier,index: Int){
     when(index){
-        0-> homeScreen(modifier = modifier)
+        0-> homeScreen2(modifier = modifier)
         1-> playerScreen(modifier = modifier)
         2-> searchScreen(modifier = modifier)
 
